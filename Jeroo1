@@ -1,0 +1,47 @@
+//THIS IS THE FIRST MAZE
+
+method main(){
+
+   Jeroo Bob = new Jeroo(19,0,500);
+   
+   while (!(Bob.isFlower(HERE))){
+      
+       if (!(Bob.isWater(LEFT))){
+         Bob.turn(LEFT);
+         Bob.hop(1);
+         
+       }
+       
+       else if (!(Bob.isWater(AHEAD))){
+          Bob.hop(1);
+          
+       }
+          
+       else if (!(Bob.isWater(RIGHT))){
+          Bob.turn(RIGHT);
+          Bob.hop(1);
+          
+       }
+          
+       else {
+          Bob.turn(RIGHT);
+          Bob.turn(RIGHT);
+       }
+   }
+   Bob.pick();
+}
+
+
+
+
+//while there is not a flower
+//if there isnt water to the left
+//then turn left and hop
+
+//else if there is no water ahead then hop
+//else if there is no water right then turn right and hop
+
+// else turn around
+//after while loop, pick
+
+// The Jeroo that picks up the flower must start at 19,0.
